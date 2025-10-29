@@ -16,6 +16,9 @@ function keluar() {
     return result
 }
 
+// Memanggip fungsi save_username() untuk mengisi variabel user
+save_username()
+
 // mengecek apakah variabel user sudah ter isi atau belum jika sudah akan mengarah ke halaman
 // Dan jika belum terisi maka function keluar dipanggil, function tersebut berisi confirmasi apakah user ingin keluar
 // atau lanjut jika lanjut maka username harus diisi
