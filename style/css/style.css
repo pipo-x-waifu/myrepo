@@ -1,0 +1,272 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Sans-Serif, Times New Roman, Segoe UI, Tahoma, Consolas;
+}
+
+nav.navbar {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+ul.navbar-index {
+    padding-left: 100px;
+    margin: 0px auto;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+ul li:not(.active)a.nav-link {
+    box-sizing: border-box;
+    color: rgba(51,50,112,0);
+    border-bottom: 2px solid rgba(51,50,112,0);
+    transform: all;
+    transition-duration: 0.30s;
+    transition-timing-function: ease-in;
+    transition-property: color, border-bottom;
+}
+
+ul li.active a.nav-link {
+    color: rgb(51,50,112)!important;
+    border-bottom: 2px solid rgb(51,50,112)!important;
+}
+
+a.navbar-brand {
+    margin-left: 10px;
+}
+
+ul li:not(.active) a.nav-link:hover  {
+    color: rgb(51,50,112)!important;
+    border-bottom: 2px solid rgb(51,50,112);
+}
+
+img.profile {
+    display: block;
+    margin-left: 10px;
+    width: 29px;
+    border-radius: 50%;
+}
+
+button.p-1 {
+    transition: all;
+    transition-duration: 0.50s;
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+    color: rgba(51,50,112,0);
+    padding: 2px!important;
+}
+
+button.p-1:hover{
+    color: rgb(51,50,112);
+}
+
+span.navbar-toggler-icon{
+    font-size: 16px;
+}
+
+form.d-flex {
+    margin-right: 10px;
+}
+
+div.container {
+    position: relative;
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 0.70rem;
+    padding-top: 80px;
+}
+
+h1.card-title {
+    margin-top: -70px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+div.pen-src {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+p.penulis {
+    margin-left: 20px;
+    font: 0.80rem Arial, Sans-Serif, Times New Roman;
+    margin-bottom: 50px;
+}
+
+p.penulis a {
+    text-decoration: none;
+    color: rgb(51,50,112);
+}
+
+p.con-text {
+    transition: all;
+    transition-duration: 0.30s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+    background-color: rgba(173,216,230,0);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+p.con-text:hover {
+    color: rgb(42,21,67);
+    background-color: rgba(173,216,230,0.621);
+}
+
+figure.figure {
+    margin-top: 10px;
+}
+
+div.card-body {
+    padding: 1rem;
+}
+
+div.card-body p.card-text{
+    text-indent: 10px;
+    word-spacing: 3px;
+}
+
+
+footer.footer {
+    position: relative;
+    padding: 1rem;
+    display: block;
+    background-color: #111;
+    max-width: 100%;
+    color: rgb(51,50,112);
+}
+
+/* default About style*/
+ul.navbar-about {
+    margin: 0px auto;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+/* Lebar layar 576 kebawah */
+@media screen and (max-width: 576px){
+    @keyframes Dact {
+        from {
+            opacity: 0%;
+            visibility: hidden;
+            margin-left: 100px;
+        }
+        to {
+            opacity: 100%;
+            margin-left: 0px;
+            visibility: visible;
+        }
+    }
+    @keyframes Dnone {
+        from {
+            opacity: 0%;
+            margin-left: 0px;
+        }
+        to {
+            opacity: 100%;
+        }
+    }
+    
+    a.navbar-brand {
+        font-size: 1.30rem!important;
+        transform: rotate(90deg);
+        margin-left: 10px;
+    }
+    
+    a.navbar-brand.none {
+        animation-name: Dnone;
+        animation-duration: 1s;
+        animation-iteration-count: alternate;
+        animation-composition: margin-left, opacity;
+        animation-timing-function: ease-in-out;
+    }
+    
+    a.navbar-brand.act {
+        visibility: visible;
+        animation-name: Dact;
+        animation-duration: 0.50s;
+        animation-iteration-count: alternate;
+        animation-composition: visibility, margin-left, opacity;
+        animation-timing-function: ease-in-out;
+    }
+    
+    ul.navbar-index {
+        padding-left: 0;
+        margin: 0px auto;
+        margin-top: 10px;
+        gap: 10px;
+    }
+    
+    ul li:not(.active) a.nav-link {
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: rgba(33,121,174,0);
+        background-color: rgba(232,235,235,0);
+        transform: all;
+        transition-duration: 0.50s;
+        transition-timing-function: ease-in;
+        transition-property: background-color, color, padding-left, border-bottom;
+    }
+    
+    ul li:not(.active) a.nav-link:hover {
+        border-bottom: 2px solid rgb(51,50,112);
+        padding-left: 10px;
+        background-color: rgba(232,235,235,0.32);
+        color: rgb(33,121,174)!important;
+    }
+    
+    ul li.active a.nav-link {
+        color: rgb(51,50,112)!important;
+        border-bottom: 2px solid rgb(51,50,112)!important;
+    }
+    
+    img.profile {
+        display: none;
+        margin-left: 10px;
+        width: 29px;
+        border-radius: 50%;
+    }
+    
+    form.d-flex {
+        margin-right: 0px;
+    }
+    
+    div.pen-src {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    
+    div.pen-src p {
+        position: absolute;
+        top: 88px;
+    }
+    
+    h1.card-title {
+        font-weight: 600;
+        font-variant: small-caps;
+        margin-bottom: 50px;
+        margin-top: -10px;
+        margin-left: 0px;
+    }
+    
+    div.container{
+        max-width: 100%;
+    }
+    
+    /* About style*/
+    ul.navbar-about {
+        margin: 0px auto;
+        margin-top: 10px;
+        gap: 10px;
+    }
+}

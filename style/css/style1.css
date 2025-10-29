@@ -1,0 +1,11 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    body {
+        background-color: lightblue;
+    }
+}
