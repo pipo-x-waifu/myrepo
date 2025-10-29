@@ -11,22 +11,22 @@ function save_username() {
 
 //jika anda menekan oke maka akan otomatis keluar dari peramban
 function keluar() {
-    var con = confirm("Apakah kamu ingin keluar?.\nJika jika iya tekan oke");
-    var result = (con == true) ? window.close() : save_username();
-    return result
+    var con = confirm("\t\tNama diperlukan!\n\nApakah kamu ingin keluar?.\nJika jika iya tekan oke");
+    var result = (con == true) ? window.close() : home();
 }
 
-// Memanggip fungsi save_username() untuk mengisi variabel user
-save_username()
-
+// Memanggil fungsi save_username() untuk mengisi variabel user
 // mengecek apakah variabel user sudah ter isi atau belum jika sudah akan mengarah ke halaman
 // Dan jika belum terisi maka function keluar dipanggil, function tersebut berisi confirmasi apakah user ingin keluar
 // atau lanjut jika lanjut maka username harus diisi
-if ( user.length < 0 ) {
-    keluar()
-} else {
-    alert("Welcome to my page " + user);
-}
+function home() {
+    save_username()
+    if ( user ) {
+        alert("Welcome to my page " + user);
+    } else {
+        keluar()
+    }
+home()
 
 // menambahkan dan menghapus class pada element
 navbar_button[0].addEventListener('click', () => {
