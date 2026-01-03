@@ -1,7 +1,7 @@
 const test = async () => {
   let welcomeUser = document.getElementById('welcomeUser');
   try {
-    const response = await fetch("http://127.0.0.1:7777/");
+    const response = await fetch("http://127.0.0.1:7777/test");
     const result = await response.json();
     
     welcomeUser.classList.toggle("d-none");
