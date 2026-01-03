@@ -1,20 +1,23 @@
-const test = async () => {
+const test = () => {
   let welcomeUser = document.getElementById('welcomeUser');
-  try {
-    const response = await fetch("http://127.0.0.1:7777/test");
-    const result = await response.json();
-    
-    welcomeUser.classList.toggle("d-none");
-    result.text.map(v => {
-      welcomeUser.innerHTML += v;
-      setTimeout(() => {
-        // 
+  fetch("http://127.0.0.1:7777/test", {method: "GET", header: {"Content-Type":"application/json"} })
+    .then(response => {
+      alert(response.status);
+      return response.json()
+      })
+    .then(response => {
+      welcomeUser.classList.toggle("d-none");
+      response.text.map(v => {
+        welcomeUser.innerHTML += v;
+        setTimeout(() => {
+        console.log(" ");
         }, 500);
+      });
+    })
+    .catch(err => {
+      welcomeUser.classList.toggle("d-none");
+      welcomeUser.innerHTML = err;
     });
-  } catch(err) {
-    welcomeUser.classList.toggle("d-none");
-    welcomeUser.innerHTML = err;
-  }
 }
 
 const indeks = () => {
@@ -37,3 +40,4 @@ const indeks = () => {
       }
   });
 }
+
