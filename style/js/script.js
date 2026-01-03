@@ -1,23 +1,23 @@
-const indeks = () => {
+const test = async () => {
   let welcomeUser = document.getElementById('welcomeUser');
-  const test = async () => {
-    try {
-      const response = await fetch("http://127.0.0.1:7777/");
-      const result = await response.json();
-      
-      welcomeUser.classList.toggle("d-none");
-      result.text.map(v => {
-        welcomeUser.innerHTML += v;
-        setTimeout(() => {
-          // 
-          }, 500);
-      });
-    } catch(err) {
-      welcomeUser.classList.toggle("d-none");
-      welcomeUser.innerHTML = err;
-    }
+  try {
+    const response = await fetch("http://127.0.0.1:7777/");
+    const result = await response.json();
+    
+    welcomeUser.classList.toggle("d-none");
+    result.text.map(v => {
+      welcomeUser.innerHTML += v;
+      setTimeout(() => {
+        // 
+        }, 500);
+    });
+  } catch(err) {
+    welcomeUser.classList.toggle("d-none");
+    welcomeUser.innerHTML = err;
   }
-  
+}
+
+const indeks = () => {
   let n = 0;
   let navbar_button = document.getElementsByClassName("navbar-toggler-icon");
   let navbar_brand = document.getElementsByClassName("navbar-brand");
