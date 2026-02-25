@@ -1,25 +1,3 @@
-const test = () => {
-  let welcomeUser = document.getElementById('welcomeUser');
-  fetch("http://127.0.0.1:7777/test", {method: "GET", header: {"Content-Type":"application/json"} })
-    .then(response => {
-      alert(response.status);
-      return response.json()
-      })
-    .then(response => {
-      welcomeUser.classList.toggle("d-none");
-      response.text.map(v => {
-        welcomeUser.innerHTML += v;
-        setTimeout(() => {
-        console.log(" ");
-        }, 500);
-      });
-    })
-    .catch(err => {
-      welcomeUser.classList.toggle("d-none");
-      welcomeUser.innerHTML = err;
-    });
-}
-
 const indeks = () => {
   let n = 0;
   let navbar_button = document.getElementsByClassName("navbar-toggler-icon");
