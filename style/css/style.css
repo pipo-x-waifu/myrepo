@@ -71,6 +71,16 @@ span.navbar-toggler-icon{
     font-size: 16px;
 }
 
+.HERO-TEXT {
+    font:small-caps oblique 0.80rem Verdana, Sans-Serrif, Times New Roman;
+    margin: 0px auto 20px;
+    background-color: rgb(73,57,158);
+    color: rgb(202,199,220);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
 form.d-flex {
     margin-right: 10px;
 }
