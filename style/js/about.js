@@ -1,7 +1,11 @@
 var navbar_button = document.getElementsByClassName("navbar-toggler-icon");
 var navbar_brand = document.getElementsByClassName("navbar-brand");
 var nav_link = document.getElementsByClassName("nav-link");
+let popup_text_yes = document.querySelector(".popup-text-yes");
+let popup_text_no = document.querySelector(".popup-text-no");
+let popup = document.querySelector(".popup");
 var n = 0;
+l
 
 navbar_button[0].addEventListener('click', () => {
     n+=1;
@@ -31,4 +35,14 @@ function navHover(n) {
         return navHover(n + 1)
     });
 }
-navHover(0)
+navHover(0);
+
+
+popup_text_yes.addEventListener("click", function(){
+     document.querySelector("container").style.display = "block";
+});
+
+popup_text_no.addEventListener("click", function(){
+    window.close();
+});
+
